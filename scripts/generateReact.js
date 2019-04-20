@@ -25,14 +25,23 @@ const transformIcon = ({name, content}) => svgr(content, svgrOptions, { componen
 const writeIcon = (name, fileContent) => writeFile(join(outDir, name), fileContent, { encoding: 'utf-8' });
 
 const template = (
-    { template },
+    { template, types },
     opts,
     { componentName, jsx, props }
   ) => {
     const typeScriptTpl = template.smart({ plugins: ['typescript', '@svgr/plugin-jsx'] })
+    const spreadExtraProps = types.jsxSpreadAttribute(types.identifier('extraProps'));
+    jsx.openingElement.attributes.push(spreadExtraProps);
     return typeScriptTpl.ast`
     import * as React from 'react';
-    export const ${componentName} = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>((props: React.SVGProps<SVGSVGElement>, svgRef: React.Ref<SVGSVGElement>) => (${jsx}));
+    import { transformContext, IkonateContext } from '../src/context';
+    export const ${componentName} = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>((props: React.SVGProps<SVGSVGElement>, svgRef: React.Ref<SVGSVGElement>) => {
+        const value = React.useContext(IkonateContext);
+        const extraProps = transformContext(value);
+        return (
+            ${jsx}
+        );
+    });
   `
 }
 

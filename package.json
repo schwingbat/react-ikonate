@@ -1,8 +1,10 @@
 {
   "name": "react-ikonate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React version of fully customisable, accessible, well-optimised vector icons",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.js",
   "keywords": [
     "icons",
     "outline",
@@ -43,6 +45,7 @@
     "rollup-plugin-typescript2": "^0.20.1"
   },
   "peerDependencies": {
-    "react": "^16.3.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }
