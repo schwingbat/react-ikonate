@@ -4,5 +4,8 @@ node_modules
 build
 .cache
 .rpt2_cache
-dist
+demo
 generated
+icons
+scripts
+templates
