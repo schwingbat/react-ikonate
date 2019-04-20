@@ -1,0 +1,46 @@
+:root {
+  --grey--light: #fafaff;
+  --white: #ffffff;
+  --brand: #2329D6;
+  --main-item-bg: var(--white);
+}
+
+body {
+  background: var(--grey--light);
+  color: var(--brand);
+}
+
+.main {
+  width: 1152px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.main__item {
+  background: var(--white);
+  border-radius: 4px;
+  padding: 20px;
+  display: inline-block;
+  margin: 10px;
+  background-color: var(--main-item-bg);
+  border-radius: 16px;
+  padding: 15px;
+  margin: 16px;
+  display: inline-block;
+  cursor: pointer;
+  border: 5px solid var(--white);
+  border-color: var(--main-item-bg);
+  -webkit-transition: border .2s,background-color .2s;
+  -o-transition: border .2s,background-color .2s;
+  transition: border .2s,background-color .2s;
+}
+
+.main__item svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
