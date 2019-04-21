@@ -1,2 +1,2 @@
 export * from '../generated';
-export * from './context';
+export { IkonateContext } from './context';

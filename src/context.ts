@@ -27,7 +27,7 @@ type StyleMap = {
 
 const styleMap: StyleMap = {
     square: { strokeLinecap: 'square', strokeLinejoin: 'miter' },
-    roundSquare: { strokeLinecap: 'square', strokeLinejoin: 'round' },
+    roundSquare: { strokeLinecap: 'round', strokeLinejoin: 'miter' },
     round: { strokeLinecap: 'round', strokeLinejoin: 'round' }
 }
 
@@ -38,7 +38,7 @@ export const transformContext: ContextTransformer = ({ style, size, border, colo
     return {
         ...iconStyle,
         strokeWidth: border,
-        stroke: color,
+        color,
         fontSize: size
     }
 }
