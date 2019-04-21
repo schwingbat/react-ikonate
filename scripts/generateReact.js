@@ -49,7 +49,8 @@ const svgrOptions = {
     icon: true,
     ref: true,
     svgProps: {
-        stroke: 'currentColor'
+        stroke: 'currentColor',
+        fill: 'none'
     },
     template
 };

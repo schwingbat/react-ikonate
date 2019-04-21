@@ -15,8 +15,8 @@ export const defaultContextValue: IkonateContextType = {
 export const IkonateContext = createContext<IkonateContextType>({});
 
 type IconStyle = {
-    strokeLineCap: 'square' | 'round';
-    strokeLineJoin: 'miter' | 'round';
+    strokeLinecap: 'square' | 'round';
+    strokeLinejoin: 'miter' | 'round';
 }
 
 type StyleMap = {
@@ -26,9 +26,9 @@ type StyleMap = {
 }
 
 const styleMap: StyleMap = {
-    square: { strokeLineCap: 'square', strokeLineJoin: 'miter' },
-    roundSquare: { strokeLineCap: 'square', strokeLineJoin: 'round' },
-    round: { strokeLineCap: 'round', strokeLineJoin: 'round' }
+    square: { strokeLinecap: 'square', strokeLinejoin: 'miter' },
+    roundSquare: { strokeLinecap: 'square', strokeLinejoin: 'round' },
+    round: { strokeLinecap: 'round', strokeLinejoin: 'round' }
 }
 
 type ContextTransformer = (context: IkonateContextType) => SVGProps<SVGSVGElement>;
