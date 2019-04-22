@@ -4,10 +4,12 @@ const fs = require('fs');
 const { join, resolve } = require('path');
 const { promisify } = require('util');
 const { pascal } = require('change-case');
+const mkdirp = require('mkdirp');
 
 const readFile = promisify(fs.readFile);
 const readDir = promisify(fs.readdir);
 const writeFile = promisify(fs.writeFile);
+const mkdir = promisify(mkdirp);
 
 const iconDir = resolve(join(__dirname, '../icons'));
 
@@ -75,6 +77,7 @@ const createIcon = async (fileName) => {
 }
 
 async function main() {
+    await mkdir(outDir);
     const icons = await readDir(iconDir);
     const index = await Promise.all(icons.map(createIcon));
     await writeFile(join(outDir, 'index.ts'), index.join('\n'), { encoding: 'utf-8' });
