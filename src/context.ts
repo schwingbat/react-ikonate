@@ -7,11 +7,6 @@ export type IkonateContextType = {
     color?: string;
 }
 
-export const defaultContextValue: IkonateContextType = {
-    border: 2,
-    style: 'square'
-}
-
 export const IkonateContext = createContext<IkonateContextType>({});
 
 type IconStyle = {
@@ -33,7 +28,7 @@ const styleMap: StyleMap = {
 
 type ContextTransformer = (context: IkonateContextType) => SVGProps<SVGSVGElement>;
 
-export const transformContext: ContextTransformer = ({ style, size, border, color } = defaultContextValue) => {
+export const transformContext: ContextTransformer = ({ style = 'square', size, border = 2, color }) => {
     const iconStyle = styleMap[style!];
     return {
         ...iconStyle,
