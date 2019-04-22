@@ -23,7 +23,7 @@ jobs:
       - run: npm install
       - run:
           name: Generate icon files
-          command: npm generate
+          command: npm run generate
 
       - run:
           name: Run tests
@@ -47,7 +47,7 @@ jobs:
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
       - run:
           name: Build package
-          command: npm build
+          command: npm run build
       - run:
           name: Publish package
           command: npm publish
