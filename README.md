@@ -1,4 +1,12 @@
-## React Ikonate
+# React Ikonate
+
+[![CircleCI](https://circleci.com/gh/danielkov/react-ikonate.svg?style=svg)](https://circleci.com/gh/danielkov/react-ikonate)
+[![Branches](./coverage/badge-branches.svg)](./coverage/badge-branches.svg)
+[![Functions](./coverage/badge-functions.svg)](./coverage/badge-functions.svg)
+[![Lines](./coverage/badge-lines.svg)](./coverage/badge-lines.svg)
+[![Statements](./coverage/badge-statements.svg)](./coverage/badge-statements.svg)
+![npm bundle size](https://badgen.net/bundlephobia/minzip/react-ikonate)
+![NPM](https://img.shields.io/npm/l/react-ikonate.svg)
 
 Based on the beautiful icon package [Ikonate](https://www.ikonate.com/) this React package aims to provide all the features of these icons, while being easily accessible in your React project.
 

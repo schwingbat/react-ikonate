@@ -23,7 +23,9 @@
   "scripts": {
     "generate": "node scripts/generateReact.js",
     "build": "rollup -c",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges"
   },
   "author": "Mikolaj Dobrucki <tease@mikolajdobrucki.com>",
   "maintainers": [
@@ -77,6 +79,11 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "coverageReporters": [
+      "json-summary", 
+      "text",
+      "lcov"
     ]
   }
 }
