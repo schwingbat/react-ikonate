@@ -521,7 +521,7 @@ exports[`all icons render as espected AlignRight renders with context [snapshot]
       Icon of four horizontal lines representing right alignment of text
     </desc>
     <path
-      d="M6 10L14 10M6 6L18 6M6 14L18 14M6 18L14 18"
+      d="M10 10h8M6 6h12M6 14h12m-8 4h8"
     />
   </svg>
 </ForwardRef>
@@ -551,7 +551,7 @@ exports[`all icons render as espected AlignRight renders with props [snapshot] 1
     Icon of four horizontal lines representing right alignment of text
   </desc>
   <path
-    d="M6 10L14 10M6 6L18 6M6 14L18 14M6 18L14 18"
+    d="M10 10h8M6 6h12M6 14h12m-8 4h8"
   />
 </svg>
 `;
@@ -580,7 +580,7 @@ exports[`all icons render as espected AlignRight renders without props [snapshot
     Icon of four horizontal lines representing right alignment of text
   </desc>
   <path
-    d="M6 10L14 10M6 6L18 6M6 14L18 14M6 18L14 18"
+    d="M10 10h8M6 6h12M6 14h12m-8 4h8"
   />
 </svg>
 `;
@@ -5810,13 +5810,13 @@ exports[`all icons render as espected CircleArrowDown renders with context [snap
       Icon of an arrow pointing down closed in a circle
     </desc>
     <path
-      d="M10.5 15l-3-3 3-3"
+      d="M15 13.5l-3 3-3-3"
     />
     <path
-      d="M16.5 12H9"
+      d="M12 15V7.5"
     />
     <path
-      d="M7.5 12H9"
+      d="M12 16.5V15v1.5z"
       strokeLinecap="round"
     />
     <circle
@@ -5852,13 +5852,13 @@ exports[`all icons render as espected CircleArrowDown renders with props [snapsh
     Icon of an arrow pointing down closed in a circle
   </desc>
   <path
-    d="M10.5 15l-3-3 3-3"
+    d="M15 13.5l-3 3-3-3"
   />
   <path
-    d="M16.5 12H9"
+    d="M12 15V7.5"
   />
   <path
-    d="M7.5 12H9"
+    d="M12 16.5V15v1.5z"
     strokeLinecap="round"
   />
   <circle
@@ -5893,13 +5893,13 @@ exports[`all icons render as espected CircleArrowDown renders without props [sna
     Icon of an arrow pointing down closed in a circle
   </desc>
   <path
-    d="M10.5 15l-3-3 3-3"
+    d="M15 13.5l-3 3-3-3"
   />
   <path
-    d="M16.5 12H9"
+    d="M12 15V7.5"
   />
   <path
-    d="M7.5 12H9"
+    d="M12 16.5V15v1.5z"
     strokeLinecap="round"
   />
   <circle
@@ -6315,7 +6315,7 @@ exports[`all icons render as espected CircleOk renders with context [snapshot] 1
     <desc
       id="circleOkIconDesc"
     >
-      Icon of a checkmark (✓) closed in a circle
+      Icon of a checkmark closed in a circle
     </desc>
     <polyline
       points="7 13 10 16 17 9"
@@ -6350,7 +6350,7 @@ exports[`all icons render as espected CircleOk renders with props [snapshot] 1`]
   <desc
     id="circleOkIconDesc"
   >
-    Icon of a checkmark (✓) closed in a circle
+    Icon of a checkmark closed in a circle
   </desc>
   <polyline
     points="7 13 10 16 17 9"
@@ -6384,7 +6384,7 @@ exports[`all icons render as espected CircleOk renders without props [snapshot] 
   <desc
     id="circleOkIconDesc"
   >
-    Icon of a checkmark (✓) closed in a circle
+    Icon of a checkmark closed in a circle
   </desc>
   <polyline
     points="7 13 10 16 17 9"
@@ -16261,7 +16261,7 @@ exports[`all icons render as espected Ok renders with context [snapshot] 1`] = `
     <desc
       id="okIconDesc"
     >
-      Icon of a checkmark (✓)
+      Icon of a checkmark
     </desc>
     <polyline
       points="4 13 9 18 20 7"
@@ -16291,7 +16291,7 @@ exports[`all icons render as espected Ok renders with props [snapshot] 1`] = `
   <desc
     id="okIconDesc"
   >
-    Icon of a checkmark (✓)
+    Icon of a checkmark
   </desc>
   <polyline
     points="4 13 9 18 20 7"
@@ -16320,116 +16320,10 @@ exports[`all icons render as espected Ok renders without props [snapshot] 1`] = 
   <desc
     id="okIconDesc"
   >
-    Icon of a checkmark (✓)
+    Icon of a checkmark
   </desc>
   <polyline
     points="4 13 9 18 20 7"
-  />
-</svg>
-`;
-
-exports[`all icons render as espected OkAlt renders with context [snapshot] 1`] = `
-<ForwardRef>
-  <svg
-    aria-labelledby="okAltIconTitle okAltIconDesc"
-    color="hotpink"
-    fill="none"
-    fontSize="30px"
-    height="1em"
-    role="img"
-    stroke="currentColor"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    strokeWidth={1}
-    viewBox="0 0 24 24"
-    width="1em"
-  >
-    <title
-      id="okAltIconTitle"
-    >
-      Ok
-    </title>
-    <desc
-      id="okAltIconDesc"
-    >
-      Icon of a checkmark (✓) closed in a circle
-    </desc>
-    <polyline
-      points="7 13 10 16 17 9"
-    />
-    <circle
-      cx={12}
-      cy={12}
-      r={10}
-    />
-  </svg>
-</ForwardRef>
-`;
-
-exports[`all icons render as espected OkAlt renders with props [snapshot] 1`] = `
-<svg
-  aria-labelledby="okAltIconTitle okAltIconDesc"
-  fill="none"
-  height="1em"
-  role="img"
-  stroke="currentColor"
-  strokeLinecap="round"
-  strokeLinejoin="round"
-  strokeWidth={1}
-  viewBox="0 0 24 24"
-  width="1em"
->
-  <title
-    id="okAltIconTitle"
-  >
-    Ok
-  </title>
-  <desc
-    id="okAltIconDesc"
-  >
-    Icon of a checkmark (✓) closed in a circle
-  </desc>
-  <polyline
-    points="7 13 10 16 17 9"
-  />
-  <circle
-    cx={12}
-    cy={12}
-    r={10}
-  />
-</svg>
-`;
-
-exports[`all icons render as espected OkAlt renders without props [snapshot] 1`] = `
-<svg
-  aria-labelledby="okAltIconTitle okAltIconDesc"
-  fill="none"
-  height="1em"
-  role="img"
-  stroke="currentColor"
-  strokeLinecap="square"
-  strokeLinejoin="miter"
-  strokeWidth={2}
-  viewBox="0 0 24 24"
-  width="1em"
->
-  <title
-    id="okAltIconTitle"
-  >
-    Ok
-  </title>
-  <desc
-    id="okAltIconDesc"
-  >
-    Icon of a checkmark (✓) closed in a circle
-  </desc>
-  <polyline
-    points="7 13 10 16 17 9"
-  />
-  <circle
-    cx={12}
-    cy={12}
-    r={10}
   />
 </svg>
 `;
