@@ -76,3 +76,5 @@ type IkonateContextType = {
 If you have problems with the package itself (i.e.: rendering in React, props not being passed, error messages on console, etc), [file an issue here](https://github.com/danielkov/react-ikonate/issues). Clone the project, make your modifications and create a PR to the branch `master`. Releases are created automatically from version tags, e.g.: `v1.0.1` for version 1.0.1.
 
 For issues related to the actual icons (i.e.: new icon request, visual issues, etc) refer to the [original repository's issue page](https://github.com/mikolajdobrucki/ikonate/issues).
+
+Ikonate and React Ikonate are available under the [MIT](https://github.com/eucalyptuss/ikonate/blob/master/LICENSE). Feel free to use the set in both personal and commercial projects. Attribution is much appreciated but not required.
