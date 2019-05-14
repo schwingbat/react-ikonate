@@ -6,3 +6,4 @@ build
 .rpt2_cache
 dist
 generated
+.vscode
