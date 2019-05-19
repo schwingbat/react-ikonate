@@ -2,10 +2,10 @@
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "jsx": "react",
-        "lib": ["dom", "es2017"],
-        "module": "esnext",
+        "target": "es5",
+        "module": "commonjs",
+        "lib": ["es2017", "es7", "es6", "dom"],
         "moduleResolution": "node",
-        "noEmit": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "preserveConstEnums": true,
@@ -13,8 +13,11 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
-        "target": "es5",
         "resolveJsonModule": true,
-        "declaration": true
-    }
+        "declaration": true,
+        "outDir": "dist"
+    },
+    "include": [
+        "src/index.ts"
+    ]
 }

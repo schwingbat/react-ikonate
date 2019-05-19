@@ -1,5 +1,4 @@
 const svgr = require('@svgr/core').default;
-const { insertRef } = require('@svgr/core');
 const fs = require('fs');
 const { join, resolve } = require('path');
 const { promisify } = require('util');
@@ -13,7 +12,7 @@ const mkdir = promisify(mkdirp);
 
 const iconDir = resolve(join(__dirname, '../icons'));
 
-const outDir = resolve(join(__dirname, '../generated'));
+const outDir = resolve(join(__dirname, '../src/generated'));
 
 const readIcon = async (fileName) => {
     const content = await readFile(join(iconDir, fileName));
@@ -47,7 +46,7 @@ const template = (
     jsx.openingElement.attributes.push(spreadExtraProps);
     return typeScriptTpl.ast`
     import * as React from 'react';
-    import { transformContext, IkonateContext } from '../src/context';
+    import { transformContext, IkonateContext } from '../context';
     export const ${componentName} = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>((props: React.SVGProps<SVGSVGElement>, svgRef: React.Ref<SVGSVGElement>) => {
         const value = React.useContext(IkonateContext);
         const extraProps = transformContext(value);
