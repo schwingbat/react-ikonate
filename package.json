@@ -1,6 +1,6 @@
 {
 	"name": "react-ikonate",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "React version of fully customisable, accessible, well-optimised vector icons",
 	"main": "dist/index.cjs.js",
 	"module": "dist/index.esm.js",
@@ -16,6 +16,7 @@
 	"files": [
 		"/dist"
 	],
+	"types": "./dist/src/index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/danielkov/react-ikonate.git"
