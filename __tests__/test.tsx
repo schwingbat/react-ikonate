@@ -10,7 +10,6 @@ const testIcon = ([name, Icon]: [string, React.ForwardRefExoticComponent<React.S
     it(`${name} renders without props`, () => {
         const wrapper = shallow(<Icon/>);
         expect(wrapper.find('svg').props()).toMatchObject({
-            role: 'img',
             width: '1em',
             height: '1em',
             strokeLinecap: 'square',
