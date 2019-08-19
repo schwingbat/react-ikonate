@@ -1,6 +1,6 @@
 const {
 	generate
-} = require('./generate')
+} = require("./generate");
 
 const template = ({
 		template,
@@ -9,6 +9,7 @@ const template = ({
 	opts, {
 		componentName,
 		jsx,
+		imports,
 		props
 	}
 ) => {
@@ -25,13 +26,15 @@ const template = ({
 	jsx.openingElement.attributes.push(lineCap);
 	jsx.openingElement.attributes.push(width);
 
-	const spreadExtraProps = types.jsxSpreadAttribute(types.identifier('extraProps'));
+    const spreadExtraProps = types.jsxSpreadAttribute(types.identifier('extraProps'));
 
 	jsx.openingElement.attributes.push(spreadExtraProps);
 	return typeScriptTpl.ast `
     import * as React from 'react';
+    ${imports[1]}
     import { transformContext, IkonateContext } from '../context';
-    export const ${componentName} = React.forwardRef<SVGSVGElement, React.SVGProps<SVGSVGElement>>((props: React.SVGProps<SVGSVGElement>, svgRef: React.Ref<SVGSVGElement>) => {
+
+    export const ${componentName} = React.forwardRef<React.Component<SvgProps>, SvgProps>((props, svgRef) => {
         const value = React.useContext(IkonateContext);
         const extraProps = transformContext(value);
         return (
@@ -41,4 +44,6 @@ const template = ({
   `
 }
 
-generate('react-ikonate', template);
+generate('react-native-ikonate', template, {
+	native: true
+})

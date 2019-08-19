@@ -2,11 +2,6 @@
 	"name": "react-ikonate",
 	"version": "2.0.0",
 	"description": "React version of fully customisable, accessible, well-optimised vector icons",
-	"main": "dist/cjs/index.js",
-	"module": "dist/esm/index.js",
-	"es2015": "dist/es/index.js",
-	"types": "dist/es/index.d.ts",
-	"sideEffects": false,
 	"keywords": [
 		"icons",
 		"outline",
@@ -15,27 +10,21 @@
 		"generator",
 		"accessibility"
 	],
-	"files": [
-		"/dist"
-	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/danielkov/react-ikonate.git"
-	},
-	"scripts": {
-		"generate": "node scripts/generateReact.js",
-		"build": "concurrently \"yarn build:es6\" \"yarn build:esm\" \"yarn build:cjs\"",
-		"build:es6": "tsc --module es6 --target es6 --outDir dist/es",
-		"build:esm": "tsc --module es6 --target es5 --outDir dist/esm",
-		"build:cjs": "tsc --module commonjs --target es5 --outDir dist/cjs",
-		"test": "jest",
-		"test:coverage": "npm test -- --coverage",
-		"test:badges": "npm run test:coverage  && jest-coverage-badges"
 	},
 	"author": "Mikolaj Dobrucki <tease@mikolajdobrucki.com>",
 	"maintainers": [
 		"Daniel Kovacs <kovacsemod@gmail.com>"
 	],
+	"scripts": {
+		"generate": "lerna run generate",
+		"build": "lerna run build",
+		"test": "lerna run test",
+		"bump": "lerna version --conventional-commits --yes",
+		"publish": "lerna publish"
+	},
 	"license": "MIT",
 	"devDependencies": {
 		"@svgr/core": "4.2.0",
@@ -52,43 +41,17 @@
 		"enzyme-adapter-react-16": "1.12.1",
 		"enzyme-to-json": "3.3.5",
 		"jest": "24.7.1",
+		"lerna": "^3.15.0",
 		"microbundle": "0.11.0",
 		"mkdirp": "0.5.1",
 		"prettier": "1.17.0",
 		"raf": "3.4.1",
 		"react": "16.8.6",
 		"react-dom": "16.8.6",
+		"react-native": "0.59.9",
+		"react-native-svg": "9.5.1",
 		"ts-jest": "24.0.2",
 		"typescript": "3.4.5",
 		"typings": "2.1.1"
-	},
-	"peerDependencies": {
-		"react": "16.8.6",
-		"react-dom": "16.8.6"
-	},
-	"jest": {
-		"moduleFileExtensions": [
-			"ts",
-			"tsx",
-			"js"
-		],
-		"transform": {
-			"\\.(ts|tsx)$": "ts-jest"
-		},
-		"setupFiles": [
-			"raf/polyfill"
-		],
-		"testRegex": "/__tests__/.*\\.(ts|tsx|js)$",
-		"setupFilesAfterEnv": [
-			"<rootDir>setupTests.ts"
-		],
-		"snapshotSerializers": [
-			"enzyme-to-json/serializer"
-		],
-		"coverageReporters": [
-			"json-summary",
-			"text",
-			"lcov"
-		]
 	}
 }

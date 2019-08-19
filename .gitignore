@@ -9,3 +9,5 @@ src/icons
 src/index.ts
 .vscode
 .rts2_cache*
+**/icons
+**/src/index.ts

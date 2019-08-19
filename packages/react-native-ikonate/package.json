@@ -1,0 +1,36 @@
+{
+	"name": "react-native-ikonate",
+	"version": "2.0.0",
+	"description": "React Native version of fully customisable, accessible, well-optimised vector icons",
+	"main": "dist/esm/index.js",
+	"module": "dist/esm/index.js",
+	"sideEffects": false,
+	"keywords": [
+		"icons",
+		"outline",
+		"customisable",
+		"icon system",
+		"generator",
+		"accessibility"
+	],
+	"files": [
+		"/dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/danielkov/react-ikonate.git"
+	},
+    "author": "Daniel Kovacs <kovacsemod@gmail.com>",
+    "scripts": {
+		"generate": "node ../../scripts/generateReactNative.js",
+		"build": "yarn build:esm",
+		"build:esm": "tsc --module es6 --target es6 --outDir dist/esm",
+		"test": "echo 'No tests specified'"
+    },
+    "license": "MIT",
+	"peerDependencies": {
+		"react": "16.8.6",
+        "react-native": "16.8.6",
+        "react-native-svg": "9.5.1"
+	}
+}
